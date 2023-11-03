@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f9af6403e148358fd69d478b2b8e72, type: 3}
+  m_Name: WtCompanyDatabase
+  m_EditorClassIdentifier: 
+  databaseName: WtCompanyDatabase
+  dataList:
+  - idx: 0
+    name: "\uAE40\uC528\uC218\uBC15"
+    power: 1000
+    powerChangePerDay: 10
+    powerGradientVar: 5
+    randomVar: 0
+  - idx: 1
+    name: "\uBC15\uC528\uC218\uBC15"
+    power: 500
+    powerChangePerDay: 30
+    powerGradientVar: 10
+    randomVar: 0
+  - idx: 2
+    name: "\uAE40\uAE40\uC528\uC218\uBC15"
+    power: 700
+    powerChangePerDay: 20
+    powerGradientVar: 7
+    randomVar: 0
+  needToBeWritable: 0

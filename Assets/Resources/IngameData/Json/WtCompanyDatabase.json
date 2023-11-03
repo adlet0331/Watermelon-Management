@@ -1,0 +1,18 @@
+[
+  {
+    "power": 1000,
+    "powerChangePerDay": 10,
+    "powerGradientVar": 5.0,
+    "randomVar": 0.0,
+    "idx": 0,
+    "name": "김씨수박"
+  },
+  {
+    "power": 500,
+    "powerChangePerDay": 30,
+    "powerGradientVar": 10.0,
+    "randomVar": 0.0,
+    "idx": 1,
+    "name": "박씨수박"
+  }
+]

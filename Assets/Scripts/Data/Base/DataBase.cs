@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
-using UnityEngine.Collections.Generic;
 
 namespace DataBaseScripts.Base
 {
@@ -12,8 +10,6 @@ namespace DataBaseScripts.Base
         [SerializeField] protected string databaseName;
         public List<T> dataList;
         [SerializeField] private bool needToBeWritable;
-        public Dictionary<int, T> dataKeyDictionary;
-        public UDictionary<int, T> dataKeyUDictionary;
 
         private void Awake()
         {
@@ -31,8 +27,6 @@ namespace DataBaseScripts.Base
                 {
                     json = file.ReadToEnd();
                     dataList = JsonConvert.DeserializeObject<List<T>>(json);
-                    dataKeyDictionary = dataList.ToDictionary(x => x.idx);
-                    dataKeyUDictionary = new UDictionary<int, T>(dataKeyDictionary);
                 }
             }
             else // 프로젝트 안, 변하지 않을 데이터, StaticData
@@ -40,13 +34,11 @@ namespace DataBaseScripts.Base
                 path = Path.Combine("IngameData", "Json", databaseName);
                 json = Resources.Load<TextAsset>(path).ToString();
                 dataList = JsonConvert.DeserializeObject<List<T>>(json);
-                dataKeyDictionary = dataList.ToDictionary(x => x.idx);
-                dataKeyUDictionary = new UDictionary<int, T>(dataKeyDictionary);
             }
         }
         public void SaveJson(){
             string path = Path.Combine(Application.dataPath, "Resources", "IngameData", "Json", databaseName + ".json");
-            File.WriteAllText(path, JsonConvert.SerializeObject(dataList));
+            File.WriteAllText(path, JsonConvert.SerializeObject(dataList, Formatting.Indented));
         }
     }
 }

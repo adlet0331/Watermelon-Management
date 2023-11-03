@@ -1,0 +1,35 @@
+[
+  {
+    "StartCost": 1000,
+    "StartPower": 1000,
+    "costChangePerDay": -40,
+    "powerChangePerDay": -50,
+    "costGradientVar": -4.0,
+    "powerGradientVar": -5.0,
+    "randomVar": 0.0,
+    "idx": 0,
+    "name": "김광고"
+  },
+  {
+    "StartCost": 2000,
+    "StartPower": 2000,
+    "costChangePerDay": -60,
+    "powerChangePerDay": -40,
+    "costGradientVar": -6.0,
+    "powerGradientVar": -4.0,
+    "randomVar": 0.0,
+    "idx": 1,
+    "name": "박광고"
+  },
+  {
+    "StartCost": 1500,
+    "StartPower": 1600,
+    "costChangePerDay": -30,
+    "powerChangePerDay": -30,
+    "costGradientVar": -10.0,
+    "powerGradientVar": -10.0,
+    "randomVar": 0.0,
+    "idx": 2,
+    "name": "조광고"
+  }
+]
