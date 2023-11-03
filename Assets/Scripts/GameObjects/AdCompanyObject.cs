@@ -1,17 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AdCompanyObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int companyId;
+    [SerializeField] private ValChangeObject money;
+    [SerializeField] private ValChangeObject power;
 
-    // Update is called once per frame
-    void Update()
+    public void Init(int id, int moneyChange, int powerChange)
+    {
+        companyId = id;
+        UpdateValues(moneyChange, powerChange);
+    }
+    public void UpdateValues(int moneyChange, int powerChange)
+    {
+        money.UpdateValue(moneyChange);
+        power.UpdateValue(powerChange);
+    }
+    public void Shoot()
     {
         
     }
